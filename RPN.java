@@ -41,14 +41,6 @@ public class RPN {
         result = evaluate();
     }
 
-    private void createEnumMap() {
-        operatorMap = new EnumMap<>(Operator.class);
-        operatorMap.put(Operator.ADD, '+');
-        operatorMap.put(Operator.SUBTRACT, '-');
-        operatorMap.put(Operator.MULTIPLY, '*');
-        operatorMap.put(Operator.DIVIDE, '/');
-    }
-
     /**
      * Returns the result of the expression after being evaluated.
      *
@@ -56,6 +48,18 @@ public class RPN {
      */
     public double getResult() {
         return result;
+    }
+    
+    /**
+     * Initializes the EnumMap.
+     */
+    
+    private void createEnumMap() {
+        operatorMap = new EnumMap<>(Operator.class);
+        operatorMap.put(Operator.ADD, '+');
+        operatorMap.put(Operator.SUBTRACT, '-');
+        operatorMap.put(Operator.MULTIPLY, '*');
+        operatorMap.put(Operator.DIVIDE, '/');
     }
 
     /**
